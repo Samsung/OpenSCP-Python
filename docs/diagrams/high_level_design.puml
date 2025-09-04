@@ -1,0 +1,86 @@
+@startuml
+
+skinparam componentStyle rectangle
+
+title SCP03/11 project architecture
+
+!$project_inscope_color = "#LightGreen"
+!$client_color = "#LightBlue"
+!$outofscope_color = "#LightGrey"
+
+
+legend
+    <color:lightgreen>**Green**</color> - component which is in the scope of project
+    <color:lightgrey>**Gray**</color> - out of scope component
+    <color:lightblue>**Blue**</color> - client application uses the project
+end legend
+
+<style>
+legend {
+    BackGroundColor transparent
+}
+</style>
+
+
+node "Host PC" as host_pc {
+    package "Python SCP package" as scp_lib_python {
+        component session_python $project_inscope_color [
+            SCP session
+        ]
+        component jpype $outofscope_color [
+            JPype interface
+        ]
+        component transport_python $project_inscope_color [
+            Transport
+        ]
+
+        session_python - transport_python
+        session_python -- jpype
+        transport_python - jpype
+
+        package "Java SCP lib" as scp_lib_java {
+            component session_java $project_inscope_color [
+                SCP session
+            ]
+            component transport_java $project_inscope_color [
+                Transport
+            ]
+
+            session_java - transport_java
+        }
+
+        jpype -- session_java
+        jpype -- transport_java
+    }
+
+    package "eSE management app" as ese_manager $client_color {
+        component transport $outofscope_color [
+            Transport layer
+            (NFC, USB)
+        ]
+        component manager $outofscope_color [
+            Applet / SD 
+            manager
+        ]
+
+        manager - transport  
+        manager -- session_python: Configure SCP
+        transport -- transport_python: Wrap\n plain\n messages
+    }
+}
+
+
+node "Device" as device {
+    package "eSE" as ese {
+        package "Security Domain" as sd {
+            component [Applet] as applet $outofscope_color
+        }
+        package "JavaCard OS" as jcop {
+            component [SCP engine] as scp $outofscope_color
+        }
+        sd -- jcop
+    }
+    transport -- sd: Exchange\n with \n wrapped APDU
+}
+
+@enduml

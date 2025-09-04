@@ -1,0 +1,10 @@
+26,29c26,29
+< .. automodule:: openscp.connection
+<    :members:
+<    :undoc-members:
+<    :show-inheritance:
+---
+> .. autoclass:: openscp.connection.SmartCardConnection
+> .. autofunction:: openscp.connection.SmartCardConnection.send_and_receive
+> .. autofunction:: openscp.connection.SmartCardConnection.is_extended_length_apdu_supported
+> .. autofunction:: openscp.connection.SmartCardConnection.close_connection

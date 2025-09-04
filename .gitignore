@@ -1,0 +1,20 @@
+# Global build & output directories
+out
+
+# Python
+__pycache__
+*.egg-info
+venv_python*
+.pytest_cache
+dist
+build
+docs/_build/
+docs/modules.rst
+docs/openscp.rst
+.mypy_cache
+
+# IDE
+.idea
+
+# Miscellaneous
+nohup.out

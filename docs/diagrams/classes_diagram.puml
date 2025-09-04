@@ -1,0 +1,59 @@
+@startuml
+
+set separator none
+
+title OpenSCP-Python library API
+
+package openscp {
+    class SecurityDomainSession {
+        + __init__(connection: SmartCardConnection) -> None
+        + get_certificate_bundle(sd_key_id: int,\n\
+                                      sd_key_version: int) -> List[ScpCertificate]
+        + authenticate_scp03(key_id: int,\n\
+                                 key_version: int,\n\
+                                 enc_key: bytes,\n\
+                                 mac_key: bytes,\n\
+                                 dek_key: bytes,\n\
+                                 scp_mode: openscp.scp_mode.ScpMode) -> None
+        + authenticate_scp11(sd_key_id: int,\n\
+                                  sd_key_version: int,\n\
+                                  oce_key_id: int,\n\
+                                  oce_key_version: int,\n\
+                                  pk_sd_ecka_bytes: bytes,\n\
+                                  cert_chain_oce_ecka: List[bytes],\n\
+                                  sk_oce_ecka_bytes: bytes,\n\
+                                  session_keys_alg: openscp.aes_alg.AesAlg,\n\
+                                  scp_mode: openscp.scp_mode.ScpMode) -> None
+        + send_and_receive(capdu: Apdu) -> None
+    }
+
+    abstract class SmartCardConnection {
+        + {abstract} send_and_receive(self, apdu: bytes) -> bytes
+        + {abstract} is_extended_length_apdu_supported(self) -> bool
+        + {abstract} close_connection(self) -> None
+    }
+
+    SecurityDomainSession --* SmartCardConnection
+
+    package "com.samsung.openscp (Java)" as openscp_java {
+        class "SecurityDomainSession" as java_SecurityDomainSession
+        class "SmartCardConnection" as java_SmartCardConnection
+    }
+
+    SecurityDomainSession --* java_SecurityDomainSession
+    SmartCardConnection ..|> java_SmartCardConnection
+
+    note bottom of openscp_java: See OpenSCP-Java library class diagram for details
+}
+
+package "Client app" {
+    class ClientSession
+    class ClientTransport
+
+    ClientSession --* ClientTransport
+}
+
+ClientSession --* SecurityDomainSession
+ClientTransport --|> SmartCardConnection
+
+@enduml
