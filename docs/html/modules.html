@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>openscp &#8212; OpenSCP-Python  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="openscp package" href="openscp.html" />
+    <link rel="prev" title="Welcome to OpenSCP-Python’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="openscp">
+<h1>openscp<a class="headerlink" href="#openscp" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openscp.html">openscp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.aes_alg">openscp.aes_alg module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.aes_alg.AesAlg"><code class="docutils literal notranslate"><span class="pre">AesAlg</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.aes_alg.AesAlg.AES_128"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_128</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.aes_alg.AesAlg.AES_192"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_192</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.aes_alg.AesAlg.AES_256"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_256</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.apdu">openscp.apdu module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu"><code class="docutils literal notranslate"><span class="pre">Apdu</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.cla"><code class="docutils literal notranslate"><span class="pre">Apdu.cla</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.data"><code class="docutils literal notranslate"><span class="pre">Apdu.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.force_add_le"><code class="docutils literal notranslate"><span class="pre">Apdu.force_add_le</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.ins"><code class="docutils literal notranslate"><span class="pre">Apdu.ins</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.le"><code class="docutils literal notranslate"><span class="pre">Apdu.le</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.p1"><code class="docutils literal notranslate"><span class="pre">Apdu.p1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.apdu.Apdu.p2"><code class="docutils literal notranslate"><span class="pre">Apdu.p2</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#openscp-connection-module">openscp.connection module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.connection.SmartCardConnection"><code class="docutils literal notranslate"><span class="pre">SmartCardConnection</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.connection.SmartCardConnection.send_and_receive"><code class="docutils literal notranslate"><span class="pre">send_and_receive()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.connection.SmartCardConnection.is_extended_length_apdu_supported"><code class="docutils literal notranslate"><span class="pre">is_extended_length_apdu_supported()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.connection.SmartCardConnection.close_connection"><code class="docutils literal notranslate"><span class="pre">close_connection()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.scp_certificate">openscp.scp_certificate module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.scp_certificate.ScpCertificate"><code class="docutils literal notranslate"><span class="pre">ScpCertificate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.scp_certificate.ScpCertificate.get_encoded"><code class="docutils literal notranslate"><span class="pre">ScpCertificate.get_encoded()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.scp_certificate.ScpCertificate.get_public_key"><code class="docutils literal notranslate"><span class="pre">ScpCertificate.get_public_key()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.scp_mode">openscp.scp_mode module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.scp_mode.ScpMode"><code class="docutils literal notranslate"><span class="pre">ScpMode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.scp_mode.ScpMode.S16"><code class="docutils literal notranslate"><span class="pre">ScpMode.S16</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.scp_mode.ScpMode.S8"><code class="docutils literal notranslate"><span class="pre">ScpMode.S8</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.session">openscp.session module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.session.SecurityDomainSession"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.session.SecurityDomainSession.authenticate_scp03"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.authenticate_scp03()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.session.SecurityDomainSession.authenticate_scp11"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.authenticate_scp11()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.session.SecurityDomainSession.get_certificate_bundle"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.get_certificate_bundle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.session.SecurityDomainSession.send_and_receive"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.send_and_receive()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp.utils">openscp.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html#module-openscp">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.AesAlg"><code class="docutils literal notranslate"><span class="pre">AesAlg</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.AesAlg.AES_128"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_128</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.AesAlg.AES_192"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_192</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.AesAlg.AES_256"><code class="docutils literal notranslate"><span class="pre">AesAlg.AES_256</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.Apdu"><code class="docutils literal notranslate"><span class="pre">Apdu</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.cla"><code class="docutils literal notranslate"><span class="pre">Apdu.cla</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.data"><code class="docutils literal notranslate"><span class="pre">Apdu.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.force_add_le"><code class="docutils literal notranslate"><span class="pre">Apdu.force_add_le</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.ins"><code class="docutils literal notranslate"><span class="pre">Apdu.ins</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.le"><code class="docutils literal notranslate"><span class="pre">Apdu.le</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.p1"><code class="docutils literal notranslate"><span class="pre">Apdu.p1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.Apdu.p2"><code class="docutils literal notranslate"><span class="pre">Apdu.p2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.ScpCertificate"><code class="docutils literal notranslate"><span class="pre">ScpCertificate</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.ScpCertificate.get_encoded"><code class="docutils literal notranslate"><span class="pre">ScpCertificate.get_encoded()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.ScpCertificate.get_public_key"><code class="docutils literal notranslate"><span class="pre">ScpCertificate.get_public_key()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.ScpMode"><code class="docutils literal notranslate"><span class="pre">ScpMode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.ScpMode.S16"><code class="docutils literal notranslate"><span class="pre">ScpMode.S16</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.ScpMode.S8"><code class="docutils literal notranslate"><span class="pre">ScpMode.S8</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.SecurityDomainSession"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.SecurityDomainSession.authenticate_scp03"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.authenticate_scp03()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.SecurityDomainSession.authenticate_scp11"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.authenticate_scp11()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.SecurityDomainSession.get_certificate_bundle"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.get_certificate_bundle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openscp.html#openscp.SecurityDomainSession.send_and_receive"><code class="docutils literal notranslate"><span class="pre">SecurityDomainSession.send_and_receive()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openscp.html#openscp.SmartCardConnection"><code class="docutils literal notranslate"><span class="pre">SmartCardConnection</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">OpenSCP-Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">openscp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openscp.html">openscp package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to OpenSCP-Python’s documentation!</a></li>
+      <li>Next: <a href="openscp.html" title="next chapter">openscp package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2025 Samsung Electronics Co, Ltd.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
