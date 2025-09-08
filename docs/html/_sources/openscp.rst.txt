@@ -1,0 +1,69 @@
+openscp package
+===============
+
+Submodules
+----------
+
+openscp.aes\_alg module
+-----------------------
+
+.. automodule:: openscp.aes_alg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openscp.apdu module
+-------------------
+
+.. automodule:: openscp.apdu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openscp.connection module
+-------------------------
+
+.. autoclass:: openscp.connection.SmartCardConnection
+.. autofunction:: openscp.connection.SmartCardConnection.send_and_receive
+.. autofunction:: openscp.connection.SmartCardConnection.is_extended_length_apdu_supported
+.. autofunction:: openscp.connection.SmartCardConnection.close_connection
+
+openscp.scp\_certificate module
+-------------------------------
+
+.. automodule:: openscp.scp_certificate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openscp.scp\_mode module
+------------------------
+
+.. automodule:: openscp.scp_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openscp.session module
+----------------------
+
+.. automodule:: openscp.session
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openscp.utils module
+--------------------
+
+.. automodule:: openscp.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: openscp
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -16,6 +16,7 @@ The feature set is according to the specifications listed below except for what 
 
 ## Documentation
 
+- [API](docs/html)
 - [Environment information](https://github.com/Samsung/OpenSCP-Python/wiki/Environment)
 - [Usage example](https://github.com/Samsung/OpenSCP-Python/wiki/Usage-example) 
 
