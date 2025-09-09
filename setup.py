@@ -35,5 +35,7 @@ setup(
             "sphinx",
             "m2r2"
         ]
-    }
+    },
+    package_data={"openscp": ["lib/*.jar"]},
+    include_package_data=True
 )
