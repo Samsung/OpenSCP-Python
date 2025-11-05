@@ -4,15 +4,19 @@
 
 ## Description
 
-The library provides support for secure communication between off-card entity (OCE) and Security Domain (SD)
-using GlobalPlatform's (GP) Secure Channel Protocols that are based on static symmetric keys (SCP03) and certificates (SCP11)
+The library provides implementation of secure communication between off-card entity (OCE) and Security Domain (SD)
+according to GlobalPlatform's (GP) [Secure Channel Protocols](https://globalplatform.org/?s=secure+channel+protocol) SCP03 based on static symmetric keys and SCP11 based on certificates. The solution utilizes [OpenSCP-Java](https://github.com/Samsung/OpenSCP-Java) prebuilt library for core logic and Python modules to build similar user interface 
 
-## Specifications
-
-The feature set is according to the specifications listed below except for what is mentioned in known issues:
+## Features
+- smooth integration to user's Secure Element transport solution as extra security layer
+- SCP 03 & 11 sepcificatons support
+### Specification compliance
+The solution provides feature set according to the specifications:
 
 - [SCP03](https://globalplatform.org/specs-library/secure-channel-protocol-03-amendment-d-v1-2/) up to v1.2
 - [SCP11](https://globalplatform.org/specs-library/secure-channel-protocol-11-amendment-f/) up to v1.4
+
+**Please aware** of [known issues](#known-issues) list which explains what features introduced in specifications aren't supported
 
 ## Documentation
 
