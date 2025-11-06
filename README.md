@@ -8,8 +8,8 @@ The library provides implementation of secure communication between off-card ent
 according to GlobalPlatform's (GP) [Secure Channel Protocols](https://globalplatform.org/?s=secure+channel+protocol) SCP03 based on static symmetric keys and SCP11 based on certificates. The solution utilizes [OpenSCP-Java](https://github.com/Samsung/OpenSCP-Java) prebuilt library for core logic and Python modules to build similar user interface 
 
 ## Features
-- smooth integration to user's Secure Element transport solution as extra security layer
-- SCP 03 & 11 sepcificatons support
+- Smooth integration to user's Secure Element transport solution as extra security layer
+- SCP 03 & 11 specifications support
 ### Specification compliance
 The solution provides feature set according to the specifications:
 
