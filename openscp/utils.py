@@ -28,8 +28,7 @@ def _start_jvm_if_needed() -> None:
     if is_jvm_started:
         return
     current_dir = os.path.dirname(os.path.realpath(__file__))
-    project_root = os.path.dirname(current_dir)
-    jpype.startJVM(classpath=[project_root + "/lib/*"])
+    jpype.startJVM(classpath=[current_dir + "/lib/*"])
     is_jvm_started = True
 
 

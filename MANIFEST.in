@@ -1,1 +1,1 @@
-recursive-include lib *.jar
+recursive-include openscp/lib *.jar
